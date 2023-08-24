@@ -9,16 +9,16 @@ estps = csvread('rt_fivefreqs_estps.csv')';
 puls = 2 * pi * [2, 3, 5, 7, 10];
 
 fft_hpuls = csvread('rt_fivefreqs_fft_hpuls.csv');
-n = 7;
+n = 5;
 hpuls = estps(:, 1:n);
-hpuls = [hpuls(:, 6) hpuls(:, 3) hpuls(:, 5) hpuls(:, 7) hpuls(:, 4)];
-fft_hpuls = [fft_hpuls(6) fft_hpuls(3) fft_hpuls(5) fft_hpuls(7) fft_hpuls(4)];
+hpuls = [hpuls(:, 4) hpuls(:, 1) hpuls(:, 3) hpuls(:, 5) hpuls(:, 2)];
+fft_hpuls = [fft_hpuls(4) fft_hpuls(1) fft_hpuls(3) fft_hpuls(5) fft_hpuls(2)];
 
 f = figure(1);
 f.Position = [1800 200 800 500];
 colororder({'r', 'g', 'b', 'c', 'm'})
 
-plot(0:size(hpuls, 1), [fft_hpuls; hpuls], '--');
+plot(0:size(hpuls, 1), [fft_hpuls; hpuls], '*');
 grid on;
 hold on;
 plot(0:size(hpuls, 1), zeros(size(hpuls, 1) + 1, size(hpuls, 2)) + puls);
