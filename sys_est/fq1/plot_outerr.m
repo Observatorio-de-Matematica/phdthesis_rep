@@ -23,5 +23,3 @@ legend('$y(t)$', '$y(t)-\chi_1(t)$', '$w(t)$', 'fontsize', fsize - 5, ...
     'interpreter', 'latex', 'location', 'northwest');
 
 print('fq1_outerr.eps', '-depsc')
-
-estps(:, end)
