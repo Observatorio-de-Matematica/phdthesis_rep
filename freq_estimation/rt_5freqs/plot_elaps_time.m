@@ -11,7 +11,7 @@ elaps_time = zeros(size(times, 1), size(times, 2) + 1);
 
 elaps_time(1) = waiting_time;
 for i = 2:1:length(elaps_time)
-    elaps_time(i) = elaps_time(i - 1) + max(times(i - 1), 0.4096);
+    elaps_time(i) = elaps_time(i - 1) + times(i - 1);
 end
 elaps_time(end) = elaps_time(end - 1) + times(end);
 
