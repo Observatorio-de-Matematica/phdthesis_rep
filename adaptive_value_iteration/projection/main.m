@@ -129,12 +129,14 @@ l3 = legend('$\tilde b_1$', '$\tilde b_2$', 'interpreter', 'latex', ...
 P = T' * icare(A, b, C' * C, r^-1, 0, eye(n), 0) * T;
 p4 = subplot(6, 1, 4);
     plot(t, x(:, ((6 * n + 1):(6 * n + n^2))) - P(:)');
+    set(gca, 'xticklabel', []);
     xlim([0, 100]);
     grid on;
     ylabel('$\tilde P$', 'interpreter', 'latex', 'fontsize', fsize);
 p5 = subplot(6, 1, 5);
     plot(t, x(:, ((6 * n + 1):(6 * n + n^2))) - P(:)');
     grid on;
+    set(gca, 'xticklabel', []);
     xlim([0, 100]);
     ylim([-0.5, 0.5]);
 p6 = subplot(6, 1, 6);
@@ -142,8 +144,8 @@ p6 = subplot(6, 1, 6);
     for i = 1:1:size(x, 1)
         ys(i) = C * x(i, 1:n)';
     end
-    grid on;
     plot(t, x(:, n + 1) - ys);
+    grid on;
     xlim([0, 100]);
     ylabel('$\tilde y$', 'interpreter', 'latex', 'fontsize', fsize);
     xlabel('t');

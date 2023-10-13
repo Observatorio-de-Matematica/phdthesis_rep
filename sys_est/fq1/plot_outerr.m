@@ -4,7 +4,6 @@ close all
 
 fsize = 17;
 
-estps = csvread('fq1_estps.csv');
 fq1_hy = csvread('fq1_hy.csv');
 fq1_y = csvread('fq1_y.csv');
 noise_samples = csvread('fq1_noise.csv');

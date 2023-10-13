@@ -20,7 +20,7 @@ plot(tt, cs1_y + noise_samples - cs1_hy, 'k');
 plot(tt, noise_samples, 'g');
 xlabel('t', 'fontsize', fsize);
 legend('$y(t)$', '$y(t)-\chi_1(t)$', '$w(t)$', 'fontsize', fsize - 5, ...
-    'interpreter', 'latex', 'location', 'southeast');
+    'interpreter', 'latex', 'location', 'northeast');
 
 print('cs1_outerr.eps', '-depsc')
 

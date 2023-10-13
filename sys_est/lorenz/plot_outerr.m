@@ -20,7 +20,7 @@ plot(tt, lorenz_y + noise_samples - lorenz_hy, 'k');
 plot(tt, noise_samples, 'g');
 xlabel('t', 'fontsize', fsize);
 legend('$y(t)$', '$y(t)-\chi_1(t)$', '$w(t)$', 'fontsize', fsize - 5, ...
-    'interpreter', 'latex', 'location', 'southeast');
+    'interpreter', 'latex', 'location', 'northeast');
 
 print('lorenz_outerr.eps', '-depsc')
 
