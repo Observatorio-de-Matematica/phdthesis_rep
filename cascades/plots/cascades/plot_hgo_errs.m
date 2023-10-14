@@ -15,7 +15,7 @@ tildexi_hgo_eps025 = readtable('tildexi_hgo_eps025.csv');
 f = figure(1);
 f.Position = [1800 200 800 500];
 
-p1 = subplot(611); hold on;
+p1 = subplot(611); hold on; box on
 plot(times, tildexi_hgo_eps005.Var1)
 plot(times, tildexi_hgo_eps01.Var1)
 plot(times, tildexi_hgo_eps025.Var1)
@@ -26,7 +26,7 @@ ylabel('$\tilde\xi_1$', 'interpreter', 'latex', 'fontsize', fsize);
 l1 = legend('$\varepsilon=0.005$', '$\varepsilon=0.01$', ...
     '$\varepsilon=0.025$', 'interpreter', 'latex', 'fontsize', fsize - 5);
 
-p2 = subplot(612); hold on;
+p2 = subplot(612); hold on; box on
 plot(times, tildexi_hgo_eps005.Var2)
 plot(times, tildexi_hgo_eps01.Var2)
 plot(times, tildexi_hgo_eps025.Var2)
@@ -35,7 +35,7 @@ grid on;
 yticks([0 10 20 30]);
 ylabel('$\tilde\xi_2$', 'interpreter', 'latex', 'fontsize', fsize);
 
-p3 = subplot(613); hold on;
+p3 = subplot(613); hold on; box on
 plot(times, tildexi_hgo_eps005.Var3)
 plot(times, tildexi_hgo_eps01.Var3)
 plot(times, tildexi_hgo_eps025.Var3)
@@ -44,7 +44,7 @@ yticks([-200 0 200]);
 ylabel('$\tilde\xi_3$', 'interpreter', 'latex', 'fontsize', fsize);
 xlabel('$t$', 'interpreter', 'latex', 'fontsize', fsize);
 
-p4 = subplot(614); hold on;
+p4 = subplot(614); hold on; box on
 plot(times, tildexi_hgo_eps005.Var1)
 plot(times, tildexi_hgo_eps01.Var1)
 plot(times, tildexi_hgo_eps025.Var1)
@@ -52,7 +52,7 @@ set(gca, 'xticklabel', []);
 grid on;
 ylim(0.1 * [-1, 1]);
 
-p5 = subplot(615); hold on;
+p5 = subplot(615); hold on; box on
 plot(times, tildexi_hgo_eps005.Var2)
 plot(times, tildexi_hgo_eps01.Var2)
 plot(times, tildexi_hgo_eps025.Var2)
@@ -60,7 +60,7 @@ set(gca, 'xticklabel', []);
 grid on;
 ylim(1.5 * [-1, 1]);
 
-p6 = subplot(616); hold on;
+p6 = subplot(616); hold on; box on
 plot(times, tildexi_hgo_eps005.Var3)
 plot(times, tildexi_hgo_eps01.Var3)
 plot(times, tildexi_hgo_eps025.Var3)
