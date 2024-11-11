@@ -1,0 +1,51 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: input   start ] */
+A : matrix([-k[1], 1], [-k[2], 0])$
+res : expand(determinant(s * ident(2) - A))$
+dres : expand((s + 0.1)*(s + 0.2))$
+
+coeff(res, s, 1) = coeff(dres, s, 1);
+coeff(res, s, 0) = coeff(dres, s, 0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+A : matrix([-k[1], 1, 0], [-k[2], 0, 1], [-k[3], 0, 0])$
+res : expand(determinant(s * ident(3) - A))$
+dres : expand((s + 0.1)*(s + 0.2)*(s + 0.3))$
+
+coeff(res, s, 2) = coeff(dres, s, 2);
+coeff(res, s, 1) = coeff(dres, s, 1);
+coeff(res, s, 0) = coeff(dres, s, 0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+A : matrix([-k[1], 1, 0, 0], [-k[2], 0, 1, 0], [-k[3], 0, 0, 1], [-k[4], 0, 0, 0])$
+res : expand(determinant(s * ident(4) - A))$
+dres : expand((s + 0.1)*(s + 0.2)*(s + 0.3)*(s + 0.4))$
+
+coeff(res, s, 3) = coeff(dres, s, 3);
+coeff(res, s, 2) = coeff(dres, s, 2);
+coeff(res, s, 1) = coeff(dres, s, 1);
+coeff(res, s, 0) = coeff(dres, s, 0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+A : matrix([-k[1], 1, 0, 0, 0], [-k[2], 0, 1, 0, 0], [-k[3], 0, 0, 1, 0], [-k[4], 0, 0, 0, 1], [-k[5], 0, 0, 0, 0])$
+res : expand(determinant(s * ident(5) - A))$
+dres : expand((s + 0.1)*(s + 0.2)*(s + 0.3)*(s + 0.4)*(s + 0.5))$
+
+coeff(res, s, 4) = coeff(dres, s, 4);
+coeff(res, s, 3) = coeff(dres, s, 3);
+coeff(res, s, 2) = coeff(dres, s, 2);
+coeff(res, s, 1) = coeff(dres, s, 1);
+coeff(res, s, 0) = coeff(dres, s, 0);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$
